@@ -160,6 +160,7 @@ const AmenitiesShowcase = () => {
 
   return (
     <section
+      id="amenities"
       ref={sectionRef}
       className="relative py-20 lg:py-32 overflow-hidden transition-colors duration-300"
       style={{

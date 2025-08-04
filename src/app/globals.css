@@ -1,9 +1,11 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 :root {
   --background: #fefefe;
   --foreground: #1a1a1a;
   --primary: #c17b47;
+  --primary-rgb: 193, 123, 71;
   --primary-light: #d49968;
   --secondary: #8b4513;
   --accent: #f4f1eb;
@@ -25,6 +27,7 @@
   --background: #1a1a1a;
   --foreground: #e5e5e5;
   --primary: #d49968;
+  --primary-rgb: 212, 153, 104;
   --primary-light: #e6b088;
   --secondary: #a0522d;
   --accent: #2d2d2d;
@@ -37,6 +40,38 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Custom Leaflet Popup Styling */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+  border: 1px solid rgba(193, 123, 71, 0.2) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  border-radius: 12px !important;
+}
+
+.leaflet-popup-tip {
+  background: white !important;
+  border: 1px solid rgba(193, 123, 71, 0.2) !important;
+}
+
+.custom-popup .leaflet-popup-close-button {
+  color: #c17b47 !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+
+.custom-popup .leaflet-popup-close-button:hover {
+  color: #d49968 !important;
+}
+
+/* Custom hover effects for theme compatibility */
+.hover\:text-primary:hover {
+  color: var(--primary) !important;
 }
 
 body {

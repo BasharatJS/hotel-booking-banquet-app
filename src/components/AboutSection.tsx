@@ -32,16 +32,18 @@ const AboutSection = () => {
     rooms: 0,
     staff: 0,
   })
-
-  const finalCounts = {
-    years: 15,
-    guests: 5000,
-    rooms: 25,
-    staff: 12,
-  }
+  const [hasAnimated, setHasAnimated] = useState(false)
 
   useEffect(() => {
-    if (isInView) {
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true)
+      const finalCounts = {
+        years: 15,
+        guests: 5000,
+        rooms: 25,
+        staff: 12,
+      }
+
       const duration = 2000 // 2 seconds
       const steps = 60
       const stepTime = duration / steps
@@ -68,7 +70,7 @@ const AboutSection = () => {
         }, stepTime)
       })
     }
-  }, [isInView, finalCounts])
+  }, [isInView])
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -159,6 +161,7 @@ const AboutSection = () => {
 
   return (
     <section
+      id="about"
       ref={sectionRef}
       className="relative py-20 lg:py-32 overflow-hidden transition-colors duration-300"
       style={{
