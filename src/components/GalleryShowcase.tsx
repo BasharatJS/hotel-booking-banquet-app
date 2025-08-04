@@ -5,7 +5,6 @@ import { motion, useInView, AnimatePresence } from 'framer-motion'
 import {
   Camera,
   Filter,
-  Eye,
   Heart,
   Share2,
   Download,
@@ -14,8 +13,6 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
-  Play,
-  Pause,
 } from 'lucide-react'
 
 const GalleryShowcase = () => {
@@ -24,8 +21,7 @@ const GalleryShowcase = () => {
   
   const [activeFilter, setActiveFilter] = useState('all')
   const [visibleCount, setVisibleCount] = useState(6)
-  const [selectedImage, setSelectedImage] = useState<any>(null)
-  const [isAutoPlay, setIsAutoPlay] = useState(false)
+  const [selectedImage, setSelectedImage] = useState<{id: number, src: string, category: string, title: string, description: string, likes: number} | null>(null)
 
   const filters = [
     { id: 'all', label: 'All Photos', count: 24 },
@@ -278,7 +274,7 @@ const GalleryShowcase = () => {
     setVisibleCount(prev => Math.min(prev + 6, filteredImages.length))
   }
 
-  const openLightbox = (image: any) => {
+  const openLightbox = (image: {id: number, src: string, category: string, title: string, description: string, likes: number}) => {
     setSelectedImage(image)
   }
 
@@ -287,12 +283,14 @@ const GalleryShowcase = () => {
   }
 
   const nextImage = () => {
+    if (!selectedImage) return
     const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id)
     const nextIndex = (currentIndex + 1) % filteredImages.length
     setSelectedImage(filteredImages[nextIndex])
   }
 
   const prevImage = () => {
+    if (!selectedImage) return
     const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id)
     const prevIndex = currentIndex === 0 ? filteredImages.length - 1 : currentIndex - 1
     setSelectedImage(filteredImages[prevIndex])
@@ -453,7 +451,7 @@ const GalleryShowcase = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
         >
           <AnimatePresence>
-            {visibleImages.map((image, index) => (
+            {visibleImages.map((image) => (
               <motion.div
                 key={`${activeFilter}-${image.id}`}
                 variants={imageVariants}

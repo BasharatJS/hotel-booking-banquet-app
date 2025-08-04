@@ -238,7 +238,7 @@ const AmenitiesShowcase = () => {
           animate={isInView ? 'visible' : 'hidden'}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
-          {amenities.map((amenity, index) => (
+          {amenities.map((amenity) => (
             <motion.div
               key={amenity.id}
               variants={cardVariants}

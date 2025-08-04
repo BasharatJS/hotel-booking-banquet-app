@@ -112,7 +112,7 @@ const HeroSlider = () => {
       }
       preloadImages()
     }
-  }, [isMobile, supportsWebP])
+  }, [isMobile, supportsWebP, slides])
 
   useEffect(() => {
     if (!isHovered) {

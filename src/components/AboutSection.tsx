@@ -68,7 +68,7 @@ const AboutSection = () => {
         }, stepTime)
       })
     }
-  }, [isInView])
+  }, [isInView, finalCounts])
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -227,7 +227,7 @@ const AboutSection = () => {
                 <p>
                   Nestled in a prime location, our guest house offers easy
                   access to major attractions, business centers, and cultural
-                  landmarks. Whether you're here for business or leisure, our
+                  landmarks. Whether you&apos;re here for business or leisure, our
                   experienced team ensures your stay is nothing short of
                   exceptional.
                 </p>
@@ -246,7 +246,7 @@ const AboutSection = () => {
               variants={itemVariants}
               className="grid grid-cols-1 sm:grid-cols-3 gap-6"
             >
-              {features.map((feature, index) => (
+              {features.map((feature) => (
                 <motion.div
                   key={feature.title}
                   variants={iconVariants}
@@ -342,7 +342,7 @@ const AboutSection = () => {
               variants={itemVariants}
               className="grid grid-cols-2 gap-4"
             >
-              {stats.map((stat, index) => (
+              {stats.map((stat) => (
                 <motion.div
                   key={stat.label}
                   variants={iconVariants}
