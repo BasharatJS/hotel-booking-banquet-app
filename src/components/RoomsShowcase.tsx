@@ -236,8 +236,7 @@ const RoomsShowcase = () => {
               className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
               style={{
                 backgroundColor: 'var(--background)',
-                border: '1px solid var(--primary)',
-                borderOpacity: 0.2,
+                border: '1px solid rgba(var(--primary-rgb), 0.2)',
               }}
               whileHover={{ y: -10, scale: 1.02 }}
             >
