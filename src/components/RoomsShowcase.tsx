@@ -357,7 +357,7 @@ const RoomsShowcase = () => {
                 {/* Starting Price */}
                 <motion.div
                   className="text-center pt-2 border-t"
-                  style={{ borderColor: 'var(--primary)', borderOpacity: 0.2 }}
+                  style={{ borderColor: 'rgba(var(--primary-rgb), 0.2)' }}
                 >
                   <span
                     className="text-xs"
