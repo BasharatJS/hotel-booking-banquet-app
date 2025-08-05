@@ -24,49 +24,67 @@ const HeroSlider = () => {
   const slides = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      imageWebP: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
-      imageMobile: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
+      image:
+        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+      imageWebP:
+        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
+      imageMobile:
+        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
       title: 'Beautiful Exterior',
       alt: 'Om Vatika Guest House Exterior View',
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      imageWebP: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
-      imageMobile: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
+      image:
+        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+      imageWebP:
+        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
+      imageMobile:
+        'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
       title: 'Luxury Room Interior',
       alt: 'Elegant guest room with modern amenities',
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      imageWebP: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
-      imageMobile: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
+      image:
+        'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+      imageWebP:
+        'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
+      imageMobile:
+        'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
       title: 'Garden Paradise',
       alt: 'Beautiful garden and outdoor spaces',
     },
     {
       id: 4,
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      imageWebP: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
-      imageMobile: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
+      image:
+        'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+      imageWebP:
+        'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
+      imageMobile:
+        'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
       title: 'Fine Dining',
       alt: 'Restaurant and dining area',
     },
     {
       id: 5,
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      imageWebP: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
-      imageMobile: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
+      image:
+        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+      imageWebP:
+        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
+      imageMobile:
+        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
       title: 'Pool & Amenities',
       alt: 'Swimming pool and recreational facilities',
     },
     {
       id: 6,
-      image: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      imageWebP: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
-      imageMobile: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
+      image:
+        'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+      imageWebP:
+        'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&fm=webp',
+      imageMobile:
+        'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80',
       title: 'Banquet Hall',
       alt: 'Elegant banquet hall for special events',
     },
@@ -83,7 +101,8 @@ const HeroSlider = () => {
       if (typeof window !== 'undefined') {
         setIsMobile(window.innerWidth < 768)
         const canvas = document.createElement('canvas')
-        const webpSupported = canvas.toDataURL('image/webp').indexOf('webp') > -1
+        const webpSupported =
+          canvas.toDataURL('image/webp').indexOf('webp') > -1
         setSupportsWebP(webpSupported)
 
         const handleResize = () => {
@@ -157,7 +176,7 @@ const HeroSlider = () => {
   }
 
   // Utility function to get optimized image URL
-  const getOptimizedImageUrl = (slide: typeof slides[0]) => {
+  const getOptimizedImageUrl = (slide: (typeof slides)[0]) => {
     if (isMobile) {
       return slide.imageMobile
     }
@@ -218,10 +237,11 @@ const HeroSlider = () => {
   return (
     <motion.section
       ref={containerRef}
-      className="relative min-h-screen h-screen sm:h-screen md:h-screen lg:min-h-[130vh] lg:h-[130vh] xl:h-screen 2xl:h-screen overflow-hidden"
+      className="relative min-h-screen h-screen sm:h-screen md:h-screen lg:min-h-[130vh] lg:h-[130vh] 
+     xl:h-screen 2xl:h-screen overflow-hidden"
       style={{
         background: 'var(--background)',
-        color: 'var(--foreground)'
+        color: 'var(--foreground)',
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: isLoaded ? 1 : 0 }}
@@ -247,7 +267,9 @@ const HeroSlider = () => {
             <motion.div
               className="w-full h-full bg-cover bg-center bg-no-repeat will-change-transform"
               style={{
-                backgroundImage: `url(${getOptimizedImageUrl(slides[currentSlide])})`,
+                backgroundImage: `url(${getOptimizedImageUrl(
+                  slides[currentSlide]
+                )})`,
               }}
               initial={{ scale: 1.05 }}
               animate={{ scale: 1.08 }}
@@ -258,7 +280,7 @@ const HeroSlider = () => {
                 repeatType: 'reverse',
               }}
             />
-            
+
             {/* Enhanced gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/60" />
             <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 via-transparent to-orange-900/20" />
@@ -271,7 +293,7 @@ const HeroSlider = () => {
         <div className="h-full flex flex-col">
           {/* Header Spacer */}
           <div className="h-4 sm:h-20 md:h-24 lg:h-40 xl:h-20 2xl:h-16 flex-shrink-0"></div>
-          
+
           {/* Content Container */}
           <div className="flex-1 flex items-center justify-center px-4 pb-2 sm:pb-8 lg:pb-24 xl:pb-12 2xl:pb-8">
             <motion.div
@@ -286,7 +308,7 @@ const HeroSlider = () => {
                 className="text-5xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl mb-8 sm:mb-6 lg:mb-8 leading-tight tracking-tight px-2"
                 style={{
                   color: 'white',
-                  textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                 }}
               >
                 Welcome to Om Vatika Guest House
@@ -295,9 +317,9 @@ const HeroSlider = () => {
               <motion.p
                 variants={itemVariants}
                 className="text-2xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-4xl 2xl:text-5xl mb-8 sm:mb-6 lg:mb-8 tracking-wide px-2"
-                style={{ 
+                style={{
                   color: 'white',
-                  textShadow: '1px 1px 3px rgba(0,0,0,0.6)'
+                  textShadow: '1px 1px 3px rgba(0,0,0,0.6)',
                 }}
               >
                 Where Comfort Meets Luxury
@@ -306,13 +328,14 @@ const HeroSlider = () => {
               <motion.p
                 variants={itemVariants}
                 className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-2xl 2xl:text-3xl mb-10 sm:mb-8 lg:mb-10 max-w-2xl lg:max-w-3xl mx-auto leading-relaxed opacity-95 px-4"
-                style={{ 
+                style={{
                   color: 'var(--muted)',
-                  textShadow: '0 2px 8px rgba(0,0,0,0.6)' 
+                  textShadow: '0 2px 8px rgba(0,0,0,0.6)',
                 }}
               >
-                Experience exceptional hospitality in our beautiful guest house and banquet hall. 
-                Perfect for your stay and special celebrations with world-class amenities.
+                Experience exceptional hospitality in our beautiful guest house
+                and banquet hall. Perfect for your stay and special celebrations
+                with world-class amenities.
               </motion.p>
 
               {/* Enhanced CTA Buttons */}
@@ -326,8 +349,8 @@ const HeroSlider = () => {
                   whileTap="tap"
                   className="text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-full font-bold text-base sm:text-lg lg:text-xl transition-all duration-300 shadow-2xl w-full sm:w-auto sm:min-w-[180px] lg:min-w-[220px] border-2"
                   style={{
-                    background: `linear-gradient(to right, var(--primary), var(--primary-light))`,
-                    borderColor: 'var(--primary)'
+                    background: `linear-gradient(to right, #8b4513, #a0522d)`,
+                    borderColor: '#8b4513',
                   }}
                 >
                   📞 Book Your Stay
@@ -336,10 +359,10 @@ const HeroSlider = () => {
                   variants={buttonVariants}
                   whileHover="hover"
                   whileTap="tap"
-                  className="bg-transparent border-2 sm:border-3 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-full text-base sm:text-lg lg:text-xl transition-all duration-300 backdrop-blur-sm w-full sm:w-auto sm:min-w-[180px] lg:min-w-[220px] shadow-xl"
+                  className="text-white border-2 sm:border-3 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-full text-base sm:text-lg lg:text-xl transition-all duration-300 backdrop-blur-sm w-full sm:w-auto sm:min-w-[180px] lg:min-w-[220px] shadow-xl"
                   style={{
-                    borderColor: 'white',
-                    color: 'white'
+                    background: `linear-gradient(to right, #8b4513, #a0522d)`,
+                    borderColor: '#8b4513',
                   }}
                 >
                   🏨 Explore Rooms
@@ -357,15 +380,15 @@ const HeroSlider = () => {
                   className="flex items-center space-x-2 sm:space-x-3 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full cursor-pointer transition-all duration-300"
                   style={{
                     backgroundColor: 'var(--accent)',
-                    color: 'var(--foreground)'
+                    color: 'var(--foreground)',
                   }}
                   whileHover={{
                     scale: 1.05,
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Phone 
-                    className="w-4 sm:w-5 h-4 sm:h-5" 
+                  <Phone
+                    className="w-4 sm:w-5 h-4 sm:h-5"
                     style={{ color: 'var(--primary)' }}
                   />
                   <span className="font-semibold text-sm sm:text-base lg:text-lg">
@@ -376,14 +399,14 @@ const HeroSlider = () => {
                   className="flex items-center space-x-2 sm:space-x-3 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full"
                   style={{
                     backgroundColor: 'var(--accent)',
-                    color: 'var(--foreground)'
+                    color: 'var(--foreground)',
                   }}
                   whileHover={{
                     scale: 1.05,
                   }}
                 >
-                  <MapPin 
-                    className="w-4 sm:w-5 h-4 sm:h-5" 
+                  <MapPin
+                    className="w-4 sm:w-5 h-4 sm:h-5"
                     style={{ color: 'var(--primary)' }}
                   />
                   <span className="font-semibold text-sm sm:text-base lg:text-lg">
@@ -404,7 +427,9 @@ const HeroSlider = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`relative transition-all duration-300 ${
-                index === currentSlide ? 'h-6 sm:h-8 w-2 sm:w-3' : 'h-2 sm:h-3 w-2 sm:w-3'
+                index === currentSlide
+                  ? 'h-6 sm:h-8 w-2 sm:w-3'
+                  : 'h-2 sm:h-3 w-2 sm:w-3'
               }`}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
@@ -428,7 +453,8 @@ const HeroSlider = () => {
           <motion.div
             className="absolute inset-0 flex items-center justify-center z-50"
             style={{
-              background: 'linear-gradient(135deg, var(--accent), var(--background))'
+              background:
+                'linear-gradient(135deg, var(--accent), var(--background))',
             }}
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -444,12 +470,12 @@ const HeroSlider = () => {
                 className="w-16 h-16 rounded-full mx-auto mb-4"
                 style={{
                   border: `4px solid var(--primary)`,
-                  borderTop: '4px solid transparent'
+                  borderTop: '4px solid transparent',
                 }}
                 animate={{ rotate: 360 }}
                 transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
               />
-              <h2 
+              <h2
                 className="text-2xl font-bold"
                 style={{ color: 'var(--foreground)' }}
               >

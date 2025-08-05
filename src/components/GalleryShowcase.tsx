@@ -426,9 +426,9 @@ const GalleryShowcase = () => {
                   : 'hover:shadow-md hover:scale-102'
               }`}
               style={{
-                backgroundColor: activeFilter === filter.id ? 'var(--primary)' : 'var(--background)',
+                background: activeFilter === filter.id ? 'linear-gradient(to right, #8b4513, #a0522d)' : 'var(--background)',
                 color: activeFilter === filter.id ? 'white' : 'var(--foreground)',
-                borderColor: activeFilter === filter.id ? 'var(--primary)' : 'rgba(var(--primary-rgb), 0.3)',
+                borderColor: activeFilter === filter.id ? '#8b4513' : 'rgba(var(--primary-rgb), 0.3)',
               }}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -556,13 +556,13 @@ const GalleryShowcase = () => {
               className="inline-flex items-center space-x-3 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl border-2"
               style={{
                 backgroundColor: 'transparent',
-                borderColor: 'var(--primary)',
-                color: 'var(--primary)',
+                borderColor: '#8b4513',
+                color: '#8b4513',
               }}
               whileHover={{ 
                 scale: 1.05, 
                 y: -3,
-                backgroundColor: 'var(--primary)',
+                background: 'linear-gradient(to right, #8b4513, #a0522d)',
                 color: 'white',
               }}
               whileTap={{ scale: 0.95 }}

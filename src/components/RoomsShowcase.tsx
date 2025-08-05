@@ -198,6 +198,20 @@ const RoomsShowcase = () => {
           animate={isInView ? 'visible' : 'hidden'}
           className="text-center mb-16"
         >
+          <motion.div
+            className="inline-flex items-center space-x-2 mb-6"
+            whileHover={{ scale: 1.05 }}
+          >
+            <Bed className="w-8 h-8" style={{ color: 'var(--primary)' }} />
+            <span
+              className="text-lg font-semibold tracking-wider uppercase"
+              style={{ color: 'var(--primary)' }}
+            >
+              Luxury Accommodation
+            </span>
+            <Bed className="w-8 h-8" style={{ color: 'var(--primary)' }} />
+          </motion.div>
+
           <motion.h2
             className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
             style={{ color: 'var(--foreground)' }}
@@ -325,9 +339,10 @@ const RoomsShowcase = () => {
                 {/* Action Buttons */}
                 <div className="flex space-x-3 pt-4">
                   <motion.button
-                    className="flex-1 py-3 px-4 rounded-xl font-semibold text-white transition-all duration-300 shadow-md hover:shadow-lg"
+                    className="flex-1 py-3 px-4 rounded-xl font-semibold text-white transition-all duration-300 shadow-md hover:shadow-lg border-2"
                     style={{
-                      background: `linear-gradient(to right, var(--primary), var(--primary-light))`,
+                      background: `linear-gradient(to right, #8b4513, #a0522d)`,
+                      borderColor: '#8b4513',
                     }}
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
@@ -338,14 +353,14 @@ const RoomsShowcase = () => {
                   <motion.button
                     className="flex items-center justify-center px-4 py-3 rounded-xl border transition-all duration-300"
                     style={{
-                      borderColor: 'var(--primary)',
-                      color: 'var(--primary)',
+                      borderColor: '#8b4513',
+                      color: '#8b4513',
                       backgroundColor: 'transparent',
                     }}
                     whileHover={{ 
                       scale: 1.05, 
                       y: -2,
-                      backgroundColor: 'var(--primary)',
+                      background: 'linear-gradient(to right, #8b4513, #a0522d)',
                       color: 'white',
                     }}
                     whileTap={{ scale: 0.95 }}
@@ -395,9 +410,10 @@ const RoomsShowcase = () => {
           className="text-center mt-16"
         >
           <motion.button
-            className="inline-flex items-center space-x-2 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center space-x-2 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl border-2"
             style={{
-              background: `linear-gradient(to right, var(--primary), var(--primary-light))`,
+              background: `linear-gradient(to right, #8b4513, #a0522d)`,
+              borderColor: '#8b4513',
             }}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}

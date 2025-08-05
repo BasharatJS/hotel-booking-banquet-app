@@ -331,35 +331,52 @@ const AmenitiesShowcase = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ delay: 1.5, duration: 0.8 }}
-          className="text-center mt-16"
+          className="text-center mt-20"
         >
+          {/* Enhanced text section with better styling */}
           <motion.div
-            className="inline-flex items-center space-x-3 mb-8"
-            whileHover={{ scale: 1.05 }}
+            className="max-w-2xl mx-auto mb-12 p-8 rounded-2xl backdrop-blur-sm border"
+            style={{
+              backgroundColor: 'rgba(var(--primary-rgb), 0.05)',
+              borderColor: 'rgba(var(--primary-rgb), 0.1)',
+            }}
+            whileHover={{ scale: 1.02 }}
           >
-            <Heart className="w-6 h-6 text-red-500" />
-            <span
-              className="text-lg font-medium"
+            <motion.div
+              className="inline-flex items-center space-x-3 mb-4"
+              whileHover={{ scale: 1.05 }}
+            >
+              <Heart className="w-6 h-6 text-red-500" />
+              <span
+                className="text-xl font-semibold"
+                style={{ color: 'var(--foreground)' }}
+              >
+                Crafted with Love
+              </span>
+              <Heart className="w-6 h-6 text-red-500" />
+            </motion.div>
+            <p
+              className="text-lg leading-relaxed"
               style={{ color: 'var(--muted)' }}
             >
-              Crafted with love for your comfort
-            </span>
-            <Heart className="w-6 h-6 text-red-500" />
+              Every amenity is thoughtfully designed to ensure your ultimate comfort and satisfaction during your stay with us.
+            </p>
           </motion.div>
 
           <motion.button
-            className="inline-flex items-center space-x-3 text-white px-10 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl"
+            className="inline-flex items-center space-x-3 text-white px-12 py-5 rounded-full font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl border-2"
             style={{
-              background: `linear-gradient(to right, var(--primary), var(--primary-light))`,
+              background: `linear-gradient(to right, #8b4513, #a0522d)`,
+              borderColor: '#8b4513',
             }}
-            whileHover={{ scale: 1.05, y: -3 }}
+            whileHover={{ scale: 1.08, y: -5 }}
             whileTap={{ scale: 0.95 }}
           >
-            <MapPin className="w-5 h-5" />
+            <MapPin className="w-6 h-6" />
             <span>Explore Our Facilities</span>
             <motion.div
-              animate={{ x: [0, 5, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
+              animate={{ x: [0, 8, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
             >
               →
             </motion.div>

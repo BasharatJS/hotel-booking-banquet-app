@@ -16,7 +16,7 @@ const Loader = ({ isLoading, onComplete }: LoaderProps) => {
     'Welcome to Om Vatika Guest House',
     'Preparing your perfect stay experience',
     'Loading comfort and hospitality',
-    'Almost ready for you...'
+    'Almost ready for you...',
   ]
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Loader = ({ isLoading, onComplete }: LoaderProps) => {
 
     // Progress animation - slower and more realistic
     const progressTimer = setInterval(() => {
-      setProgress(prev => {
+      setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(progressTimer)
           // Only call onComplete when progress reaches 100%
@@ -38,7 +38,7 @@ const Loader = ({ isLoading, onComplete }: LoaderProps) => {
 
     // Message rotation
     const messageTimer = setInterval(() => {
-      setCurrentMessage(prev => (prev + 1) % loadingMessages.length)
+      setCurrentMessage((prev) => (prev + 1) % loadingMessages.length)
     }, 2000) // Slower message rotation
 
     return () => {
@@ -57,19 +57,24 @@ const Loader = ({ isLoading, onComplete }: LoaderProps) => {
           transition={{ duration: 0.5 }}
           className="fixed inset-0 z-[9999] flex items-center justify-center"
           style={{
-            background: 'linear-gradient(135deg, var(--accent), var(--background), var(--accent))',
+            background:
+              'linear-gradient(135deg, var(--accent), var(--background), var(--accent))',
           }}
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0" style={{
-              background: 'radial-gradient(circle at 25% 25%, var(--primary) 0%, transparent 50%), radial-gradient(circle at 75% 75%, var(--secondary) 0%, transparent 50%)'
-            }}></div>
-            <div 
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  'radial-gradient(circle at 25% 25%, var(--primary) 0%, transparent 50%), radial-gradient(circle at 75% 75%, var(--secondary) 0%, transparent 50%)',
+              }}
+            ></div>
+            <div
               className="absolute top-0 left-0 w-96 h-96 rounded-full blur-3xl -translate-x-48 -translate-y-48"
               style={{ backgroundColor: 'var(--primary)' }}
             ></div>
-            <div 
+            <div
               className="absolute bottom-0 right-0 w-96 h-96 rounded-full blur-3xl translate-x-48 translate-y-48"
               style={{ backgroundColor: 'var(--secondary)' }}
             ></div>
@@ -81,11 +86,11 @@ const Loader = ({ isLoading, onComplete }: LoaderProps) => {
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ 
-                duration: 1, 
-                ease: "easeOut",
-                type: "spring",
-                stiffness: 100
+              transition={{
+                duration: 1,
+                ease: 'easeOut',
+                type: 'spring',
+                stiffness: 100,
               }}
               className="mb-8 flex justify-center"
             >
@@ -98,22 +103,23 @@ const Loader = ({ isLoading, onComplete }: LoaderProps) => {
                   transition={{
                     duration: 3,
                     repeat: Infinity,
-                    ease: "linear"
+                    ease: 'linear',
                   }}
                   className="w-20 h-20 rounded-full border-4 border-transparent"
                   style={{
                     background: `conic-gradient(from 0deg, var(--primary), var(--primary-light), transparent, var(--primary))`,
                   }}
                 >
-                  <div 
+                  <div
                     className="w-full h-full rounded-full flex items-center justify-center"
                     style={{ backgroundColor: 'var(--background)' }}
                   >
-                    <span 
+                    <span
                       className="font-bold text-2xl"
                       style={{ color: 'var(--primary)' }}
                     >
-                      ॐ
+                      {/* ॐ */}
+                      OM
                     </span>
                   </div>
                 </motion.div>
@@ -127,7 +133,7 @@ const Loader = ({ isLoading, onComplete }: LoaderProps) => {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="mb-6"
             >
-              <h1 
+              <h1
                 className="text-4xl lg:text-5xl font-bold mb-2"
                 style={{ color: 'var(--foreground)' }}
               >
@@ -143,7 +149,7 @@ const Loader = ({ isLoading, onComplete }: LoaderProps) => {
                   Vatika
                 </span>
               </h1>
-              <p 
+              <p
                 className="text-lg font-medium"
                 style={{ color: 'var(--primary)' }}
               >
@@ -180,7 +186,7 @@ const Loader = ({ isLoading, onComplete }: LoaderProps) => {
               transition={{ delay: 1, duration: 0.6 }}
               className="mb-4"
             >
-              <div 
+              <div
                 className="w-full h-2 rounded-full overflow-hidden"
                 style={{ backgroundColor: 'rgba(var(--primary-rgb), 0.2)' }}
               >
@@ -192,7 +198,7 @@ const Loader = ({ isLoading, onComplete }: LoaderProps) => {
                   }}
                   initial={{ width: 0 }}
                   animate={{ width: `${Math.round(progress)}%` }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  transition={{ duration: 0.3, ease: 'easeOut' }}
                 />
               </div>
               <motion.p
@@ -205,7 +211,6 @@ const Loader = ({ isLoading, onComplete }: LoaderProps) => {
                 {Math.round(progress)}%
               </motion.p>
             </motion.div>
-
           </div>
         </motion.div>
       )}

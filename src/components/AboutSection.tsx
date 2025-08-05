@@ -289,9 +289,10 @@ const AboutSection = () => {
             {/* CTA Button */}
             <motion.div variants={itemVariants} className="pt-4">
               <motion.button
-                className="inline-flex items-center space-x-2 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center space-x-2 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl border-2"
                 style={{
-                  background: `linear-gradient(to right, var(--primary), var(--primary-light))`,
+                  background: `linear-gradient(to right, #8b4513, #a0522d)`,
+                  borderColor: '#8b4513',
                 }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
