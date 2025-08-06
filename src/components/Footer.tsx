@@ -670,12 +670,15 @@ const Footer = () => {
           >
             <p className="text-sm" style={{ color: 'var(--muted)' }}>
               ©2025 Ohm Vatika Guest House. All rights reserved. Powered by{' '}
-              <span
+              <a
+                href="https://www.evonnexis.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="transition-colors duration-300 cursor-pointer hover:underline font-medium hover:opacity-80"
                 style={{ color: 'var(--primary)' }}
               >
                 Evonnexis Pvt. Ltd.
-              </span>
+              </a>
             </p>
           </div>
         </motion.div>

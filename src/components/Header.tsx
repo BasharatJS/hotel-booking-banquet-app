@@ -54,6 +54,7 @@ const Header = () => {
     { label: 'Rooms', id: 'rooms' },
     { label: 'Amenities', id: 'amenities' },
     { label: 'Gallery', id: 'gallery' },
+    { label: 'Reviews', id: 'reviews' },
     { label: 'Contact', id: 'contact' },
   ]
 

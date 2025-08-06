@@ -17,10 +17,13 @@ import {
   Sparkles,
   MapPin,
   Heart,
+  Clock,
+  Star,
+  CheckCircle,
 } from 'lucide-react'
 
 const AmenitiesShowcase = () => {
-  const sectionRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
 
   const amenities = [
@@ -30,6 +33,16 @@ const AmenitiesShowcase = () => {
       title: 'High-Speed WiFi',
       description:
         'Complimentary high-speed internet access throughout the property for seamless connectivity.',
+      additionalInfo:
+        'Stay connected with blazing-fast fiber-optic internet. Perfect for video calls, streaming, and business work. Available in all rooms, lobby, and outdoor areas.',
+      hoverTitle: 'Lightning Fast Internet',
+      hoverDescription:
+        'Experience blazing speeds up to 1Gbps with our fiber-optic network. Perfect for streaming, gaming, and business needs.',
+      features: [
+        'Fiber Optic Connection',
+        'Up to 1Gbps Speed',
+        '99.9% Uptime Guarantee',
+      ],
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
@@ -38,6 +51,16 @@ const AmenitiesShowcase = () => {
       title: 'Free Parking',
       description:
         'Secure and complimentary parking facility available 24/7 for all our guests.',
+      additionalInfo:
+        'Covered parking spaces with CCTV surveillance and electronic gate access. Accommodates cars, SUVs, and motorcycles. No reservation required.',
+      hoverTitle: 'Premium Parking Solutions',
+      hoverDescription:
+        'Spacious covered parking with advanced security systems, EV charging stations, and valet services available.',
+      features: [
+        'Covered Parking',
+        'EV Charging Stations',
+        'Valet Service Available',
+      ],
       gradient: 'from-green-500 to-emerald-500',
     },
     {
@@ -46,6 +69,16 @@ const AmenitiesShowcase = () => {
       title: 'Multi-Cuisine Restaurant',
       description:
         'Savor delicious local and international cuisines prepared by our expert chefs.',
+      additionalInfo:
+        'Open from 6 AM to 11 PM serving breakfast, lunch, and dinner. Features Indian, Continental, Chinese, and Mediterranean dishes with vegetarian and vegan options.',
+      hoverTitle: 'Culinary Excellence',
+      hoverDescription:
+        'Award-winning chefs create masterpieces from around the world. From local delicacies to international favorites.',
+      features: [
+        'Award-Winning Chefs',
+        '5 Cuisine Types',
+        'Farm-to-Table Ingredients',
+      ],
       gradient: 'from-orange-500 to-red-500',
     },
     {
@@ -54,6 +87,12 @@ const AmenitiesShowcase = () => {
       title: 'Fitness Center',
       description:
         'State-of-the-art gym equipment for maintaining your fitness routine during your stay.',
+      additionalInfo:
+        'Fully equipped with cardio machines, weight training equipment, and free weights. Open 24/7 with air conditioning and music system for your comfort.',
+      hoverTitle: 'Complete Wellness Hub',
+      hoverDescription:
+        'Modern equipment, personal trainers, yoga classes, and wellness programs designed for your health journey.',
+      features: ['Personal Trainers', 'Yoga Classes', 'Modern Equipment'],
       gradient: 'from-purple-500 to-indigo-500',
     },
     {
@@ -62,6 +101,12 @@ const AmenitiesShowcase = () => {
       title: 'Swimming Pool',
       description:
         'Refreshing outdoor swimming pool with crystal clear water for relaxation and recreation.',
+      additionalInfo:
+        'Olympic-size swimming pool with separate kids area. Pool deck with comfortable loungers and umbrellas. Lifeguard on duty during peak hours.',
+      hoverTitle: 'Aquatic Paradise',
+      hoverDescription:
+        'Olympic-sized pool with heated water, poolside service, and stunning views. Open from sunrise to sunset.',
+      features: ['Olympic Size Pool', 'Heated Water', 'Poolside Service'],
       gradient: 'from-cyan-500 to-blue-500',
     },
     {
@@ -70,6 +115,16 @@ const AmenitiesShowcase = () => {
       title: '24/7 Security',
       description:
         'Round-the-clock security services ensuring your safety and peace of mind.',
+      additionalInfo:
+        'Professional security team with CCTV monitoring, electronic key card access, and emergency response system. Regular patrolling throughout the premises.',
+      hoverTitle: 'Advanced Security Systems',
+      hoverDescription:
+        'Multi-layer security with trained personnel, CCTV monitoring, and smart access control for complete protection.',
+      features: [
+        'Trained Personnel',
+        'CCTV Monitoring',
+        'Smart Access Control',
+      ],
       gradient: 'from-gray-600 to-gray-800',
     },
     {
@@ -78,6 +133,12 @@ const AmenitiesShowcase = () => {
       title: 'Coffee Lounge',
       description:
         'Cozy coffee lounge serving premium beverages and light snacks throughout the day.',
+      additionalInfo:
+        'Artisan coffee bar with specialty drinks, fresh pastries, and light meals. Comfortable seating with free WiFi. Perfect for meetings or relaxation.',
+      hoverTitle: 'Artisan Coffee Experience',
+      hoverDescription:
+        'Handcrafted beverages by skilled baristas using premium beans sourced from around the world.',
+      features: ['Skilled Baristas', 'Premium Beans', 'Handcrafted Beverages'],
       gradient: 'from-amber-600 to-orange-600',
     },
     {
@@ -86,6 +147,12 @@ const AmenitiesShowcase = () => {
       title: '24/7 Room Service',
       description:
         'Dedicated room service available around the clock for your convenience and comfort.',
+      additionalInfo:
+        'Extensive menu with hot meals, beverages, and snacks delivered to your room. Quick service with average delivery time of 25 minutes.',
+      hoverTitle: 'Luxury Room Service',
+      hoverDescription:
+        'Gourmet meals delivered to your room within 30 minutes. Extensive menu available round the clock.',
+      features: ['30-Min Delivery', 'Gourmet Menu', '24/7 Availability'],
       gradient: 'from-rose-500 to-pink-500',
     },
     {
@@ -94,6 +161,12 @@ const AmenitiesShowcase = () => {
       title: 'Entertainment Hub',
       description:
         'Premium cable TV with international channels and streaming entertainment options.',
+      additionalInfo:
+        'Smart TVs in every room with Netflix, Amazon Prime, and Disney+ access. High-definition channels including sports, news, movies, and documentaries.',
+      hoverTitle: 'Ultimate Entertainment',
+      hoverDescription:
+        '500+ channels, streaming services, gaming consoles, and premium sound systems in every room.',
+      features: ['500+ Channels', 'Streaming Services', 'Gaming Consoles'],
       gradient: 'from-violet-500 to-purple-500',
     },
     {
@@ -102,6 +175,12 @@ const AmenitiesShowcase = () => {
       title: 'Climate Control',
       description:
         'Individual climate control systems in every room for optimal comfort year-round.',
+      additionalInfo:
+        'Smart thermostats with remote control via mobile app. Energy-efficient AC units with air purification and humidity control for perfect indoor climate.',
+      hoverTitle: 'Smart Climate Systems',
+      hoverDescription:
+        'AI-powered climate control with personalized settings, air purification, and energy-efficient operation.',
+      features: ['AI-Powered Control', 'Air Purification', 'Energy Efficient'],
       gradient: 'from-sky-500 to-blue-500',
     },
     {
@@ -110,6 +189,16 @@ const AmenitiesShowcase = () => {
       title: 'Event Spaces',
       description:
         'Elegant banquet halls and meeting rooms equipped with modern audio-visual facilities.',
+      additionalInfo:
+        'Multiple venues for 20-500 guests with professional lighting, sound systems, and projectors. Dedicated event coordinators and catering services available.',
+      hoverTitle: 'Professional Event Venues',
+      hoverDescription:
+        'Versatile spaces for weddings, conferences, and celebrations with full-service event planning support.',
+      features: [
+        'Wedding Venues',
+        'Conference Rooms',
+        'Event Planning Support',
+      ],
       gradient: 'from-emerald-500 to-teal-500',
     },
     {
@@ -118,6 +207,16 @@ const AmenitiesShowcase = () => {
       title: 'Housekeeping',
       description:
         'Daily housekeeping services maintaining impeccable cleanliness and hygiene standards.',
+      additionalInfo:
+        'Professional cleaning staff using eco-friendly products. Daily room cleaning, fresh linens, and towel service. Special requests accommodated promptly.',
+      hoverTitle: 'Premium Housekeeping',
+      hoverDescription:
+        'Eco-friendly cleaning products, twice-daily service, and personalized preferences for your comfort.',
+      features: [
+        'Eco-Friendly Products',
+        'Twice Daily Service',
+        'Personalized Care',
+      ],
       gradient: 'from-yellow-500 to-orange-500',
     },
   ]
@@ -243,23 +342,20 @@ const AmenitiesShowcase = () => {
             <motion.div
               key={amenity.id}
               variants={cardVariants}
-              className="group relative overflow-hidden rounded-2xl border transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+              className="group relative overflow-hidden rounded-2xl border transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
               style={{
                 backgroundColor: 'var(--background)',
                 borderColor: 'rgba(var(--primary-rgb), 0.1)',
                 borderWidth: '1px',
+                minHeight: '420px',
               }}
             >
               {/* Default Card Content */}
-              <div className="relative p-6 h-full z-10 group-hover:opacity-0 transition-opacity duration-500">
+              <div className="relative p-6 h-full transition-opacity duration-500 group-hover:opacity-0 flex flex-col">
                 {/* Icon Container */}
-                <motion.div
-                  className="relative mb-4"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
+                <div className="relative mb-4">
                   <div
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg"
+                    className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
                     style={{ backgroundColor: 'var(--accent)' }}
                   >
                     <amenity.icon
@@ -267,7 +363,7 @@ const AmenitiesShowcase = () => {
                       style={{ color: 'var(--primary)' }}
                     />
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Title */}
                 <h3
@@ -279,49 +375,136 @@ const AmenitiesShowcase = () => {
 
                 {/* Description */}
                 <p
-                  className="text-sm leading-relaxed transition-colors duration-300"
+                  className="text-sm leading-relaxed mb-4 transition-colors duration-300"
                   style={{ color: 'var(--muted)' }}
                 >
                   {amenity.description}
                 </p>
-              </div>
 
-              {/* Hover Overlay - Left to Right Animation */}
-              <motion.div
-                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{
-                  background: `linear-gradient(135deg, #ffffff, #f8fafc)`,
-                }}
-                initial={{ x: '-100%' }}
-                whileHover={{ x: '0%' }}
-                transition={{ duration: 0.6, ease: 'easeOut' }}
-              >
-                {/* Dark Theme Overlay */}
-                <div className="absolute inset-0 bg-gray-900 dark:bg-white opacity-0 dark:opacity-100"></div>
+                {/* Additional Info */}
+                <p
+                  className="text-xs leading-relaxed mb-4 flex-grow transition-colors duration-300"
+                  style={{ color: 'var(--muted)', opacity: 0.8 }}
+                >
+                  {amenity.additionalInfo}
+                </p>
 
-                <div className="relative z-10 text-center p-6">
-                  <amenity.icon className="w-16 h-16 mx-auto mb-4 text-gray-800 dark:text-gray-900" />
-                  <h4 className="font-bold text-2xl mb-3 text-gray-800 dark:text-gray-900">
-                    {amenity.title}
-                  </h4>
-                  <p className="text-base leading-relaxed mb-4 text-gray-600 dark:text-gray-700">
-                    {amenity.description}
-                  </p>
-                  <div className="bg-gray-100 dark:bg-gray-200 px-4 py-2 rounded-full">
-                    <span className="text-sm font-semibold text-gray-800 dark:text-gray-900">
-                      Available 24/7
-                    </span>
+                {/* Hover hint */}
+                <div className="mt-auto">
+                  <div
+                    className="inline-flex items-center space-x-2 px-3 py-2 rounded-full border text-xs font-medium transition-all duration-300 group-hover:scale-105"
+                    style={{
+                      backgroundColor: 'rgba(var(--primary-rgb), 0.05)',
+                      borderColor: 'rgba(var(--primary-rgb), 0.2)',
+                      color: 'var(--primary)',
+                    }}
+                  >
+                    <Sparkles className="w-3 h-3" />
+                    <span>Hover for details</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              {/* Colored Gradient Background on Hover */}
-              <motion.div
-                className={`absolute inset-0 bg-gradient-to-r ${amenity.gradient} opacity-0 group-hover:opacity-20`}
-                initial={{ x: '-100%' }}
-                whileHover={{ x: '0%' }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
-              />
+              {/* Hover Overlay Content */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center overflow-hidden">
+                {/* Background */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    backgroundColor: 'var(--background)',
+                    backgroundImage: `linear-gradient(135deg, rgba(var(--primary-rgb), 0.05), rgba(var(--primary-rgb), 0.15))`,
+                  }}
+                />
+
+                {/* Gradient Overlay */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${amenity.gradient} opacity-10`}
+                />
+
+                {/* Content */}
+                <div className="relative z-10 text-center px-6 py-4 w-full h-full flex flex-col justify-between">
+                  {/* Top Section */}
+                  <div className="flex-shrink-0">
+                    {/* Icon with animation */}
+                    <div className="mb-3">
+                      <div
+                        className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-xl mx-auto transform group-hover:scale-110 transition-transform duration-500"
+                        style={{
+                          backgroundColor: 'var(--accent)',
+                          border: '2px solid rgba(var(--primary-rgb), 0.3)',
+                        }}
+                      >
+                        <amenity.icon
+                          className="w-8 h-8"
+                          style={{ color: 'var(--primary)' }}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Hover Title */}
+                    <h4
+                      className="font-bold text-lg mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+                      style={{ color: 'var(--foreground)' }}
+                    >
+                      {amenity.hoverTitle}
+                    </h4>
+                  </div>
+
+                  {/* Middle Section - Description and Features */}
+                  <div className="flex-grow flex flex-col justify-center">
+                    {/* Hover Description */}
+                    <p
+                      className="text-xs leading-relaxed mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75"
+                      style={{ color: 'var(--muted)' }}
+                    >
+                      {amenity.hoverDescription}
+                    </p>
+
+                    {/* Features List */}
+                    <div className="space-y-1 mb-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-150">
+                      {amenity.features.map((feature, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center justify-center space-x-2"
+                        >
+                          <CheckCircle
+                            className="w-3 h-3 flex-shrink-0"
+                            style={{ color: 'var(--primary)' }}
+                          />
+                          <span
+                            className="text-xs font-medium text-center"
+                            style={{ color: 'var(--foreground)' }}
+                          >
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Bottom Section - Status Badge */}
+                  <div className="flex-shrink-0">
+                    <div
+                      className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-200"
+                      style={{
+                        backgroundColor: 'rgba(var(--primary-rgb), 0.1)',
+                        borderColor: 'rgba(var(--primary-rgb), 0.3)',
+                      }}
+                    >
+                      <Clock
+                        className="w-3 h-3"
+                        style={{ color: 'var(--primary)' }}
+                      />
+                      <span
+                        className="text-xs font-semibold"
+                        style={{ color: 'var(--primary)' }}
+                      >
+                        Available 24/7
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -359,7 +542,8 @@ const AmenitiesShowcase = () => {
               className="text-lg leading-relaxed"
               style={{ color: 'var(--muted)' }}
             >
-              Every amenity is thoughtfully designed to ensure your ultimate comfort and satisfaction during your stay with us.
+              Every amenity is thoughtfully designed to ensure your ultimate
+              comfort and satisfaction during your stay with us.
             </p>
           </motion.div>
 
